@@ -186,7 +186,6 @@ Matrix::Matrix(const string &filename)
     }
 }
 
-
 Matrix Matrix::operator*(const Matrix &other) const
 {
     if (c != other.r)
@@ -651,7 +650,7 @@ int main()
     Matrix mat1(3, 3, true);                         // Create a 3x3 matrix with random values (uniform distribution)
     Matrix mat2(3, 3, false, 0.0, 1.0);              // Create a 3x3 matrix with random values (normal distribution)
     Matrix mat3 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}; // Create a matrix from an initializer list
-    Matrix mat4("example.csv");                      // Load a matrix from a CSV file
+    Matrix mat4({{6, 0, 9}, {0, 4, 7}, {9, 2, 3}}); 
 
     // Print the matrices
     std::cout << "Matrix 1:" << std::endl;
